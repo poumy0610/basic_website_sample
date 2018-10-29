@@ -54,7 +54,11 @@ $route['posts/create'] = 'posts/create';
 $route['posts/update'] = 'posts/update';
 $route['posts/(:any)'] = 'posts/view/$1'; 
 $route['posts'] = 'posts/index';
+
 $route['default_controller'] = 'pages/view';
+
+$route['categories/create'] = 'categories/create';
+
 $route['(:any)'] = 'pages/view/$1'; //1022 :any = local with any path
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
