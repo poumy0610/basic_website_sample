@@ -57,7 +57,9 @@ $route['posts'] = 'posts/index';
 
 $route['default_controller'] = 'pages/view';
 
-$route['categories/create'] = 'categories/create';
+$route['categories'] = 'categories/index';
+$route['categories/create'] = 'categories/create'; //categories controller & create function
+$route['categories/posts/(:any)'] = 'categories/posts/$1';
 
 $route['(:any)'] = 'pages/view/$1'; //1022 :any = local with any path
 $route['404_override'] = '';
