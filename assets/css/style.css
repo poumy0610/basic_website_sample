@@ -8,6 +8,7 @@
     display: block;
 
 }
-.post-thumb{
-    width:100%;
-}
+#fixed-size{  
+    height: auto;
+    width: 250px; 
+}  
