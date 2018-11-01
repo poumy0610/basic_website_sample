@@ -22,6 +22,8 @@
                 'slug' => $slug,
                 'body' => $this->input->post('body'),
                 'category_id' => $this->input->post('category_id'),
+                'user_id' => $this->session->userdata('user_id'),
+                // 基本上, session會在每個頁面載入後, 以全域的方式運行
                 'post_image' => $post_image
             );
 
