@@ -58,7 +58,7 @@ $autoload['packages'] = array();
 |
 |	$autoload['libraries'] = array('user_agent' => 'ua');
 */
-$autoload['libraries'] = array('form_validation','session');
+$autoload['libraries'] = array('form_validation', 'session', 'pagination');
 // 1025 make sure the right format of data
 // sessoin is for login 
 /*

@@ -1,11 +1,21 @@
 <?php
 class Posts extends CI_Controller {
 
-        public function index()
+        public function index($offset = 0)
         {	
+            // Pagination Config
+            $config['base_url'] = base_url() . 'posts/index/';
+            $config['total_rows'] = $this->db->count_all('posts');
+            $config['per_page'] = 3;
+            $config['uri_segment'] = 3;  // http://localhost/yi/posts  => base: localhost/yi(1) /posts(2) 
+            $config['attributes'] = array('class' => 'pagination-link');
+            
+            // Init Pagination
+            $this->pagination->initialize($config); 
+
 			$data['title'] = 'Latest Posts'; // Capitalize the first letter
             
-            $data['posts'] = $this->post_model->get_posts();
+            $data['posts'] = $this->post_model->get_posts(FALSE, $config['per_page'], $offset);
             //print_r($data['posts']);  // check $data catch correct
             
             $this->load->view('templates/header');

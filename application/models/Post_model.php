@@ -3,8 +3,12 @@
         public function __construct(){
             $this->load->database();
         }
-        public function get_posts($slug = FALSE){
-            if($slug === FALSE){ //no slug -> no go to read more 
+        public function get_posts($slug = FALSE, $limit = FALSE, $offset = FALSE){
+            if($limit){
+                $this->db->limit($limit, $offset);
+            }
+
+            if($slug === FALSE){ //no slug -> no go to read more == in posts/index
                 $this->db->order_by('posts.id', 'DESC');
                 $this->db->join('categories', 'categories.id = posts.category_id');
 
