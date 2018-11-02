@@ -7,7 +7,7 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="http://localhost/yi/assets/css/style.css">
   <!-- <script src="https://cdn.ckeditor.com/ckeditor5/11.1.1/classic/ckeditor.js"></script> -->
   <script src="https://cdn.ckeditor.com/4.10.1/standard/ckeditor.js"></script>
   <!-- <script src="../ckeditor/ckeditor.js"></script> -->
@@ -69,4 +69,12 @@
 
     <?php if($this->session->flashdata('user_loggedin')): ?>
       <?php echo '<p class="alert alert-success">'.$this->session->flashdata('user_loggedin').'</p>'; ?>
+    <?php endif; ?>
+
+    <?php if($this->session->flashdata('user_loggedout')): ?>
+      <?php echo '<p class="alert alert-success">'.$this->session->flashdata('user_loggedout').'</p>'; ?>
+    <?php endif; ?>
+
+    <?php if($this->session->flashdata('category_deleted')): ?>
+      <?php echo '<p class="alert alert-success">'.$this->session->flashdata('category_deleted').'</p>'; ?>
     <?php endif; ?>

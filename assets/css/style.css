@@ -1,6 +1,11 @@
 /* body{
     display: none;
 } */
+img{
+    width: 250px;
+    height: auto;
+}
+
 .post-date{
     background: #d3d3d3;
     padding: 4px;
@@ -25,6 +30,10 @@ a.pagination-link{
     margin: 5px;
     background: #f4f4f4;
     border: 1px #ccc solid;
+}
+
+.cat-delete{
+    display: inline;
 }
 
 #fixed-size{  
